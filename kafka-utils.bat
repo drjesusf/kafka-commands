@@ -10,6 +10,9 @@ Start-Process -NoNewWindow -FilePath "$env:KAFKA_HOME\bin\windows\kafka-server-s
 REM Listar los topicos de kafka desde PowerShell
 & "$env:KAFKA_HOME\bin\windows\kafka-topics.bat" --list --bootstrap-server localhost:9092
 
+REM Crear un consumer en kafka desde PowerShell
+& "$env:KAFKA_HOME\bin\windows\kafka-console-consumer.bat" --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+
 REM Listar los topicos de kafka
 C:\kafka\kafka_2.13-3.8.1\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
 
